@@ -109,18 +109,3 @@ npx expo start --tunnel
 
 ---
 
-## 🔒 Git Configuration & Security (`.gitignore`)
-
-The project contains a pre-configured `.gitignore` file to ensure security and prevent large generated folders from polluting your GitHub repository.
-
-### Key Ignored Paths:
-* `node_modules/`: Prevent committing massive external library assets.
-* `.expo/` & `dist/`: Locally generated cache folders created during builds.
-* `*.jks`, `*.p8`, `*.p12`, `*.key`, `*.pem`, `*.mobileprovision`: Native mobile signing keys and certificates (Crucial to prevent uploading security keys to GitHub).
-* `/android` & `/ios`: Locally generated native folders created when running prebuild commands.
-
-Before pushing your changes, confirm your git status is clean:
-```bash
-git status
-```
-Only your custom source code files inside `src/` should be listed for staging.
